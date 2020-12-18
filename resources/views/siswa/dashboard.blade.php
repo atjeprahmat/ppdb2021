@@ -5,12 +5,12 @@
     <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
       <!--Left Col-->
       <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-        <p class="uppercase tracking-loose w-full">Hallo Supriatna</p>
+        <p class="uppercase tracking-loose w-full">Hallo {{$data->nama}} dengan no seleksi {{$data->no_seleksi}}</p>
         <h1 class="my-4 text-5xl font-bold leading-tight">
-          Selamat datang calon siswa/siswi SMK Wikrama {{Auth::user()->id}}
+          Selamat datang calon siswa/siswi SMK Wikrama 
         </h1>
         <p class="leading-normal text-2xl mb-8">
-          Sub-hero message, not too long and not too short. Make it just right!
+          Hai {{$data->nama}} silahkan cek kelengkapan data diri anda pada halaman ini, pastikan data diri anda sesuai
         </p>
         <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
           Upload Berkas
@@ -52,10 +52,14 @@
       <div class="flex flex-wrap">
         <div class="w-5/6 sm:w-1/2 p-6">
           <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-            Lorem ipsum dolor sit amet
+            Data Diri
           </h3>
           <p class="text-gray-600 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+            Nama lengkap : {{$data->nama}} <br>
+            Jenis kelamin : {{$data->jk}} <br>
+            Tempat/tanggal lahir : {{$data->tempat_lahir}}/{{$data->tanggal_lahir}} <br>
+            Agama : {{$data->agama}} <br>
+            Anak ke : {{$data->anak_ke}}
             <br />
             <br />
 
@@ -345,10 +349,10 @@
         <div class="w-full sm:w-1/2 p-6 mt-6">
           <div class="align-middle">
             <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Lorem ipsum dolor sit amet
+              Alamat Anda
             </h3>
             <p class="text-gray-600 mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+              Anda tinggal di {{$data->jalan}} RT {{$data->rt}} RW {{$data->rw}} no. {{$data->no_rumah}} Desa/Kelurahan {{$data->desa_kelurahan}}, Kecamatan {{$data->kecamatan}}, Kota/kabupaten {{$data->kota_kabupaten}}, Kode POS {{$data->kode_pos}}
               <br />
               <br />
               Images from:
