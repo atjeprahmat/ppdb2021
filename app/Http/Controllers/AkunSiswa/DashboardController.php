@@ -8,8 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class DashboardController extends Controller
 {
     public function index(){
-        $id = Auth::user()->id;
-        
+        //$id = Auth::user()->id;
         return view('siswa.dashboard');
     }
 }
